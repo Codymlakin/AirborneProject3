@@ -1,4 +1,10 @@
 terraform {
+  backend "s3" {
+    bucket = "eaglesbackend"
+    key    = "terraform/terraform.tfstate"
+    region = "us-east-1"
+    profile = "cmlakin"
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
