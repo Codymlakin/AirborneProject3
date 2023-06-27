@@ -16,12 +16,12 @@ pipeline {
             }
         }
         
-        stage('Terraform Plan') {
-            steps {
-                // Run Terraform plan to see the planned changes
-                sh 'terraform plan'
-            }
-        }
+        // stage('Terraform Plan') {
+        //     steps {
+        //         // Run Terraform plan to see the planned changes
+        //         sh 'terraform plan'
+        //     }
+        // }
         
         stage('Terraform Apply') {
             steps {
