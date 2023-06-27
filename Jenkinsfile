@@ -2,12 +2,12 @@ pipeline {
     agent any
     
     stages {
-        stage('Checkout') {
-            steps {
-                // Checkout your Terraform configuration from version control
-                checkout scm
-            }
-        }
+    //     stage('Checkout') {
+    //         steps {
+    //             // Checkout your Terraform configuration from version control
+    //             checkout scm
+    //         }
+    //     }
         
         stage('Terraform Init') {
             steps {
@@ -26,7 +26,7 @@ pipeline {
         stage('Terraform Apply') {
             steps {
                 // Apply the changes using Terraform
-                sh 'terraform apply -auto-approve'
+                sh 'terraform apply --auto-approve'
             }
         }
     }
