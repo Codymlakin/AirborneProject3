@@ -10,6 +10,7 @@ module "eks" {
   subnet_ids               = aws_subnet.subnet_private[*].id
   control_plane_subnet_ids = aws_subnet.subnet_public[*].id
   cluster_endpoint_public_access  = true
+  create_kms_key = false
 
   cluster_addons = {
     coredns = {
