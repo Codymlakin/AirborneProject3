@@ -26,6 +26,5 @@ terraform {
 }
 
 provider "aws" {
-  profile = "cmlakin"
   region  = "us-east-1"
 }
