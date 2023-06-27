@@ -39,15 +39,15 @@ module "eks" {
     }
   }
   # aws-auth configmap
-  manage_aws_auth_configmap = true
+  # manage_aws_auth_configmap = true
 
-  aws_auth_roles = [
-    {
-      rolearn = "arn:aws:iam::785169158894:role/eksctl-vettec20230313-cluster-ServiceRole-1450QA3BKEFC" # Add Jenkins Server Role w/ EKS auth
-      user    = "eagles"
-      group   = ["system:masters"]
-    },
-  ]
+  # aws_auth_roles = [
+  #   {
+  #     rolearn = "arn:aws:iam::785169158894:role/eksctl-vettec20230313-cluster-ServiceRole-1450QA3BKEFC" # Add Jenkins Server Role w/ EKS auth
+  #     user    = "eagles"
+  #     group   = ["system:masters"]
+  #   },
+  # ]
 }
 
 
